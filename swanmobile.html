@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>take only what you need</title>
+<link rel="shortcut icon" href="images/favicon.png">
+<!-- start of script tooltip -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+<script>
+(function($){
+$(document).ready(function(){
+$("a[title], img[title]").style_my_tooltips({
+tip_follows_cursor:true,
+tip_delay_time:0,
+tip_fade_speed:40,
+attribute:"title"
+});
+});
+})(jQuery);
+</script>
+<!-- end of script tooltip -->
+
+<script>
+  const texts = [
+    "you are not meant to know everything right now, in the meantime, clean your mirror",
+    "you are deserving of everything you desire",
+    "you are here to live, not perform",
+    "it’s never too late to start collecting knick knacks",
+    "you have all the time you’ll ever need, now act like it",
+    "your soul is a portal to infinite abundance",
+    "your worth isn’t determined by your ability to be useful",
+    "do your homework",
+    "stop looking for a finish line",
+    "fill your life with things worth remembering",
+    "change brought on by criticism will never last",
+    "i think you need a nap",
+    "let people show you who they are",
+    "it’s never too late to join the circus",
+    "do you feel valuable?",
+        "you were built for everything you have experienced, are experiencing and will experience",
+    "buy the wig",
+    "beauty can be a beacon of hope when you allow yourself to have a say in what it is",
+    "don’t be afraid to be seen as angry",
+    "perfection obliterates variation",
+        "you don’t deserve to spend all of your days looking over your shoulder",
+    "who you are when you’re bored is not who you are at your essence",
+    "we are all alone in our brains",
+    "life is not a movie, but a music video",
+    "complacency is not peace",
+        "celebrate your messes",
+    "mirrors and all things with borders are portals to different dimensions",
+    "the future is best left translucent",
+    "love is everywhere",
+    "the point is not to know everything but to not allow the uncertainty of life define you",
+        "rudeness is bluntness without compassion",
+    "write a letter to yourself from an alternate reality",
+    "overthinking is not the same as thinking deeply",
+    "name your inner critic - don’t punish yourself for existing",
+    "the things that make you different are the things that make you shine - don’t let your fears get to them before you",
+        "when you hate yourself, signs can look like threats",
+    "you cannot recreate something that never existed",
+    "expectations leave no room for curiosity",
+    "your life is more than being agreeable or disagreeable",
+    "no one can tell you how to grieve",
+    "don’t listen to internet psychologists",
+    "will you become who you are or will you mourn?",
+    "do you think you’re cool or something? because you are",
+    "share your kindness without expecting it to be understood - notice when it is",
+    "you are only as kind as you are to yourself",
+    "what tickles your heart and soul?",
+    "happiness was never meant to be felt alone",
+    "it won’t be this way forever",
+    "figure out where you end and where the rest of the world begins",
+    "your six year old self would be proud of you",
+    "your friends want you to be happy",
+    "be mindful of how you talk to and about yourself",
+    "i hope you stick around",
+    "empathy is not a pity party",
+    "we are all somebody to someone",
+    "freedom, gratitude and respect are found not far from each other",
+    "free will only exists when you choose it does",
+    "i am airdropping you a fist bump as you read this",
+    "your intuition would never encourage negative perceptions",
+    "look up at the sky to remember where you’re going",
+    "life is one big difficult conversation we get better and better at having",
+    "we all have a shadow - yours doesn’t make you unlovable",
+    "many things can be true at once, which means there are always at least 2 exits",
+    "now, say hello to the fourth wall",
+    "why are you here?",
+    "nobody knows you like you do, only you can honour your truth",
+    "we’re on our way home forever",
+    "you were born human this time for a reason",
+    "believing in good is an act of courage",
+    "if not now, then when?",
+    "tarot cards are for insight, not knowledge",
+    "love is rebellion",
+    "there is no one to impress or idolize",
+    "don’t wait for the world to get its shit together to love yourself",
+    "your heart is a blueprint",
+"here take these, you will need them later<br><br><img src='images/stuff.png' style='max-width: 200px;'>",
+    "the world is your dance floor",
+    "do a cartwheel",
+    "we are just individuals disguised as mirrors",
+  ];
+
+function showRandomText() {
+  document.getElementById("welcomeMsg").style.display = "none"; // hide welcome message
+  const randomTextDiv = document.getElementById("randomText");
+  randomTextDiv.style.display = "block"; // show the random text div
+
+  const randomIndex = Math.floor(Math.random() * texts.length);
+  randomTextDiv.innerHTML = texts[randomIndex];
+}
+</script>
+<script>
+  function showPage(pageId) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    if (pageId) {
+      document.getElementById(pageId).classList.add('active');
+    }
+  }
+</script>
+<style>
+#s-m-t-tooltip {
+    max-width:300px; /* maximum width */
+    background: transparent;
+    color:#000;
+    font-style:italic;
+    font-size: 37px;
+    text-transform:lowercase; /* uppercase, lowercase, none */
+    padding:2px; /* padding size */
+    margin:19px 0px 0px 10px; /* margin size */
+    z-index:9999999999999999999999;}
+    
+body {
+  background-image: url('images/bg.webp');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}
+
+p    {
+    color: white;}
+    
+    .page {
+  display: none;
+  position: fixed;
+  color: #020d84;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 400px;
+  padding: 10px;
+  padding-top:30px;
+border: 3px solid #2f2cb0;
+  background-image: url('images/bg.webp');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+  overflow:scroll;
+}
+
+
+    .page.active {
+      display: block;
+    }
+    
+    .buttonz {
+      position: absolute;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+            filter: saturate(1.4);
+    }
+    
+    .buttonz:hover {
+        transform: scale(1.1);;
+    }
+    
+#fclose {
+      top: 5px;
+      right:5px;
+      width: 100px;
+    }
+
+#green {
+    position:fixed;
+    top:100px;
+    right:30px;
+    width:150px;
+    background:transparent;
+}
+
+#orange {
+    position:fixed;
+    top:275px;
+    right:30px;
+    width:150px;
+    background:transparent;}
+    
+#swan {
+    position:fixed;
+    bottom:-50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size:25px;
+    border-radius:0px;
+    opacity:1
+}
+
+#randomText {
+    font-size: 35px;
+    border: 3px solid #2f2cb0;
+    padding: 20px;
+    width: 600px;
+    top:50px;
+    left:50px;
+    margin: auto;
+    display: none;
+    text-align: center;
+    background-color: transparent;
+    position:fixed;
+}
+
+</style>
+</head>
+<body>
+<p id="welcomeMsg" style="font-size:60px">
+  fortunes from the void<br>take only what you need
+</p>
+
+<div id="randomText"></div>
+
+<div id="swan"><img 
+  src="images/swanbig.png" 
+  alt="Show random text" 
+  onclick="showRandomText()" title="okay you ready?"
+  style="width:500px; cursor: pointer;"></div>
+
+<!-- Buttons -->
+<!-- Green Butterfly -->
+<img src="images/instructions.png" class="buttonz" id="green" onclick="showPage('page1')" title="instructions" />
+
+<!-- Orange Butterfly -->
+<img src="images/info.png" class="buttonz" id="orange" onclick="showPage('page2')" title="what the hell is this" />
+
+<!-- Pages -->
+<div id="page1" class="page">
+<p style="font-size:32px; color:#000;">click the <img src="images/swansmall.png" width="120px" height="120px"> for a fortune. take only what you need. think of a question. or anything, really. do you know where you’re going? it’s okay, you don’t have to. pick a word and think about it for the rest of the day. fix yourself a run-on sentence. you can even close your eyes and forget all about it. and come back soon, come back anytime.
+<img src="images/x.png" class="buttonz" id="fclose" onclick="showPage(null)" title="okay thanks"/>
+</div>
+
+<div id="page2" class="page">
+<br><br><br><p style="font-size:23px; color:#000;"><em>pink swan oracle</em> is a series of punchlines and cryptic affirmations i’ve written and collected over 2018-2020. don’t tell anyone this but they each correlate to a tarot card. there’s two that don’t. i’m not going to tell you which ones.<br><br>
+
+the art of fortune telling is becoming more and more popular in today’s society where hope feels scarce. whether they offer entertainment or a strange sense of comfort, the internet has seen a sudden influx of tarot readers and gained access to mass spread - often simplified for easy consumption - esoteric knowledge. the idea of random is no longer meaningless but rather relabelled as synchronicities. perhaps there’s more to life after all.<br><br>
+
+it makes sense to crave divine validation, it parallels our human need for certainty. but for me, certainty and validation are tricky because they can be addicting. addiction drives us away from building connections with others but also with ourselves.<br><br>
+
+at times my soul felt so lost and helpless that looking for it meant having to confront the parts of myself that i’d been avoiding. it can be painful to see all the ways you’ve neglected yourself. however, if spirituality is about finding your own answers, i must not forget my sovereignty.<br><br>
+
+that means no one knows you like you do. and no one can make up your mind for you. putting value on others’ opinions or thoughts, or even measuring your own value based on your shortcomings or achievements can distort your reality. at the end of the day, we’re all just human beings perceiving life in our own ways, seeking connection.<br><br>
+
+these online readings can only give you something to think about - you have to figure out what they mean for you. you get to decide. will you recognize that your fears are just illusions and doubts about your identity? you are right where you’re meant to be and enough as you are. are you brave enough to believe it? are you brave enough to face the changes that realization could possibly bring?
+<img src="images/x.png" class="buttonz" id="fclose" onclick="showPage(null)" title="cool"/>
+</div>
+
+</body>
+</html>
